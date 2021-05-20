@@ -6,6 +6,7 @@ module.exports = {
     name: 'getorder',
     description: 'fetches a orders info',
     execute(message,args) {
+        if(message.author.id !== '299216236238077952') return message.channel.send("You cannot execute this command!")
         const orderId = args[0]
 
         axios.get(`https://dev.sellix.io/v1/orders/${orderId}`,{ headers: { 'authorization': 'Bearer '+sellix_token }}).then(res => {
