@@ -7,6 +7,7 @@ app.use(bodyParser.json())
 
 app.post('/getorder',(req,res) => {
     console.log(req.body)
+    res.send("cheers mate")
 })
 
 app.listen(process.env.PORT || 3000, () => {
