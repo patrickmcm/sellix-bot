@@ -1,12 +1,12 @@
 const axios = require('axios')
-const { sellix_token } = require('../config.json')
+const { sellix_token,ownerId } = require('../config.json')
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'getorder',
     description: 'fetches a orders info',
     execute(message,args) {
-        if(message.author.id !== '299216236238077952') return message.channel.send("You cannot execute this command!")
+        if(message.author.id !== ownerId) return message.channel.send("You cannot execute this command!")
         const orderId = args[0]
 
         axios.get(`https://dev.sellix.io/v1/orders/${orderId}`,{ headers: { 'authorization': 'Bearer '+sellix_token }}).then(res => {
