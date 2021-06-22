@@ -12,6 +12,7 @@ Firstly put the domain as https://yourdomain.com/api/getorder then set the event
 
 ## Step 4
 Go onto all your products, and on each of them add a custom field, set custom filed "Name" as "Discord ID" (THIS IS REQUIRED FOR THE AUTO-ROLE SYSTEM TO WORK)
+- Make sure to let the customer know that they need to already be in the server to be ranked automatically.
 
 The rest you can configure yourself.
 
