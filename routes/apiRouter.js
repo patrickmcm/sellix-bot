@@ -26,7 +26,7 @@ router.post('/getorder',async (req,res) => {
         channel.send(`<@${discID}>`)
         channel.send(grantedRole)
     })
-    res.json({success:true,message:"granted the user their role"})
+    res.status(500).json({success:true,message:"granted the user their role"})
     } catch(e) {
         console.log(e)
         res.json({success:false,error:e})
